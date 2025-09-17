@@ -33,6 +33,29 @@ proxies:
     port: 15121
     cipher: chacha20-ietf-poly1305
     password: a2691789-6941-4ad5-95d4-3c44a0d5e00a
+ proxies:
+  - name: "usdtvpn-com-free"
+    type: ss
+    server: 209.141.34.202
+    port: 80
+    cipher: chacha20-ietf-poly1305
+    password: "6f86f60b01"
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket
+      host: apple.com
+      path: /iphone
+      mux: true
+
+proxy-groups:
+  - name: "Auto"
+    type: select
+    proxies:
+      - "usdtvpn-com-free"
+
+rules:
+  - MATCH,Auto
+
 
   - name: "🇭🇰 香港"
     type: ss
