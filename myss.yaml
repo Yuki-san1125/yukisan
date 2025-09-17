@@ -1,39 +1,4 @@
 proxies:
-  - name: "🇺🇸 美国"
-    type: ss
-    server: 36.141.40.46
-    port: 15161
-    cipher: chacha20-ietf-poly1305
-    password: a2691789-6941-4ad5-95d4-3c44a0d5e00a
-
-  - name: "🇰🇷 韩国"
-    type: ss
-    server: 36.141.40.46
-    port: 15151
-    cipher: chacha20-ietf-poly1305
-    password: a2691789-6941-4ad5-95d4-3c44a0d5e00a
-
-  - name: "🇸🇬 新加坡"
-    type: ss
-    server: 36.141.40.46
-    port: 15141
-    cipher: chacha20-ietf-poly1305
-    password: a2691789-6941-4ad5-95d4-3c44a0d5e00a
-
-  - name: "🇯🇵 日本"
-    type: ss
-    server: 36.141.40.46
-    port: 15131
-    cipher: chacha20-ietf-poly1305
-    password: a2691789-6941-4ad5-95d4-3c44a0d5e00a
-
-  - name: "🇨🇳 台湾"
-    type: ss
-    server: 36.141.40.46
-    port: 15121
-    cipher: chacha20-ietf-poly1305
-    password: a2691789-6941-4ad5-95d4-3c44a0d5e00a
- proxies:
   - name: "usdtvpn-com-free"
     type: ss
     server: 209.141.34.202
@@ -55,27 +20,3 @@ proxy-groups:
 
 rules:
   - MATCH,Auto
-
-
-  - name: "🇭🇰 香港"
-    type: ss
-    server: 183.240.138.163
-    port: 15211
-    cipher: chacha20-ietf-poly1305
-    password: a2691789-6941-4ad5-95d4-3c44a0d5e00a
-
-proxy-groups:
-  - name: "🌍 Proxy"
-    type: select
-    proxies:
-      - "🇺🇸 美国"
-      - "🇰🇷 韩国"
-      - "🇸🇬 新加坡"
-      - "🇯🇵 日本"
-      - "🇨🇳 台湾"
-      - "🇭🇰 香港"
-      - DIRECT
-
-rules:
-  - GEOIP,CN,DIRECT
-  - MATCH,🌍 Proxy
