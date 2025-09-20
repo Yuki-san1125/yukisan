@@ -11,14 +11,3 @@ proxies:
       host: apple.com
       path: /iphone
       tls: false
-
-proxy-groups:
-  - name: "Proxy"
-    type: select
-    proxies:
-      - "usdtvpn-com-free"
-      - "DIRECT"
-
-rules:
-  - GEOIP,CN,DIRECT
-  - MATCH,Proxy
